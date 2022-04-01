@@ -10,6 +10,15 @@
 local example_array : felt*
 assert example_array[0] = "example"
 
+# storage arrays
+@storage_var
+func example_array(i : felt) -> (res : felt):
+end
+
+example_array.write(0, 123)
+example_array.write(1, 456)
+
+
 # array with a struct
 let (local example_struct_array : MyStruct*) = alloc()
 assert example_struct_array[0] = MyStruct(
@@ -20,6 +29,9 @@ let a = example_array[0] # return "example"
 let a_first =  example_struct_array[0].first_member
 let a_second = example_struct_array[0].second_member
 
+#for storage arrays
+example_array.read(0) # return 123
+example_array.read(1) # return 456
 ######################################################################
 #                                                                    # 
 #                               SOLİDİTY                             #
