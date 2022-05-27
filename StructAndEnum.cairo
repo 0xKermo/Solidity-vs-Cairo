@@ -43,6 +43,7 @@ _structs.write(struct_id,new_struct)
             #                                                   Solidity                                               #
             #                                                                                                          #
             ############################################################################################################
+
 ###     Setters     ##
 
 struct ExampleStruct {
